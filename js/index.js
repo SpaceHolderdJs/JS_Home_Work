@@ -43,6 +43,11 @@ switch (nam1) {
 
     case ("Nastya"):
         alert("Woman");
+        
+        break;
+        default:alert("Do not anderstend you")
 
 }
+
+
 
