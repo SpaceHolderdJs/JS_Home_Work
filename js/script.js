@@ -1,6 +1,6 @@
-let runningtotal = 0;
+let runningTotal = 0;
 let buffer = "0";
-let previowsOperator;
+let previousOperator;
 
 const screen = document.querySelector('.screen');
 
@@ -17,18 +17,18 @@ function handleSymbol(symbol) {
     switch (symbol) {
         case 'C':
             buffer = '0';
-            runningtotal = 0;
+            runningTotal = 0;
             break;
         case '=':
-            if (previowsOperator === null) {
+            if (previousOperator === null) {
                 return
             }
             flushOperation(preseint(buffer));
-            previowsOperator = null;
-            buffer = runningtotal;
-            runningtotal = 0;
+            previousOperator = null;
+            buffer = runningTotal;
+            runningTotal = 0;
             break;
-        case '←';
+        case '←':
             if (buffer.length === 1) {
                 buffer = '0';
             } else {
@@ -49,26 +49,26 @@ function handleMath(symbol) {
         return;
     }
 
-    const inBuffer = parent(buffer);
-    if (runningtotal === 0) {
-        runningtotal = inBuffer;
+    const intBuffer = parent(buffer);
+    if (runningTotal === 0) {
+        runningTotal = intBuffer;
     } else {
-        flashOperation(inBuffer);
+        flushOperation(intBuffer);
     }
-    previowsOperator = symbol;
+    previousOperator = symbol;
     buffer = '0';
 
 }
 
-function flashOperation(inBuffer) {
-    if (previowsOperator === '+') {
-        runningtotal += inBuffer;
-    } else if (previowsOperator === '-') {
-        runningtotal -= inBuffer;
-    } else if (previowsOperator === '*') {
-        runningtotal *= inBuffer
-    } else if (previowsOperator === '/') {
-        runningtotal /= inBuffer;
+function flushOperation(intBuffer) {
+    if (previousOperator === '+') {
+        runningTotal += intBuffer;
+    } else if (previousOperator === '-') {
+        runningTotal -= intBuffer;
+    } else if (previousOperator === '×') {
+        runningTotal *= intBuffer
+    } else if (previousOperator === '÷') {
+        runningTotal /= intBuffer;
     }
 }
 
@@ -82,9 +82,10 @@ function handleNumber(numberString) {
 }
 
 function init() {
-    document.querySelector('.calc-buttons').addEventListener('click', function (event){
-        buttonClick(event.target.innerText);
-})
-    
+    document.querySelector('.calc-buttons').
+        addEventListener('click', function (event) {
+            buttonClick(event.target.innerText);
+        })
 }
+
 init();
