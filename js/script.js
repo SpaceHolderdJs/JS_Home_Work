@@ -1,14 +1,14 @@
 //1
 
 const user1 = {
-	name: true,
-	age: 12,
+    name: true,
+    age: 12,
     country: "Ukraine"
 }
 
-const user2 = {...user1}
+const user2 = { ...user1 }
 
-for (let key in user1 ) {
+for (let key in user1) {
     user1[key] = user2[key];
     delete user2['name']
     delete user2['age']
@@ -20,17 +20,28 @@ console.log(user2.country);
 
 //2
 
-let e = {n: 1, m: 2};
-let d = {a: 1, b: 2, c: 3};
-
-let b = {
-    
+const Obj1 = {
+    n: 1,
+    m: 2,
 };
 
-for (let i = 0 ; i <= String.length; i++){
-    console.log();
+const Obj2 = {
+    a: 1,
+    b: 2,
+    c: 3
 };
 
+if (Object.keys(Obj1).length < Object.keys(Obj2).length) {
+    console.log(Obj1)
+} else if (Object.keys(Obj1).length > Object.keys(Obj2).length) {
+    console.log(Obj2)
+}
 
 
-console.log(e);
+//крутив фантазію як міг )))
+
+
+
+
+// console.log(Object.keys(Obj1).length);
+// console.log(Object.keys(Obj2).length);
