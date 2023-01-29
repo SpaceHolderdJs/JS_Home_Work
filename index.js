@@ -7,7 +7,7 @@ for (let el of arr) {
     console.log(arr);
 }
 
-
+console.log(arr[0],arr[1],arr[2],arr[3]);
 
 // Очікуваний результат
 // [1, 2, 4, 7]; 
@@ -25,6 +25,7 @@ const arr1 = ["Poland", "Ukraine", "USA"];
 //         console.log(el);
 //     }
 // });
+
 
 
 
