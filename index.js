@@ -3,11 +3,20 @@
 const arr = ["1", "2", "4", "7"];
 const res = [];
 
-for (let el of arr) {
-    console.log(arr);
-}
+// for (let el of arr) {
+//     console.log(arr);
+// }
 
-console.log(arr[0],arr[1],arr[2],arr[3]);
+// for (let key in arr) {
+//     console.log(arr[key]);
+// }
+
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+} 
+//    не те що потрібно але наближене ))
+
+// console.log(arr[0],arr[1],arr[2],arr[3]);
 
 // Очікуваний результат
 // [1, 2, 4, 7]; 
@@ -26,7 +35,10 @@ const arr1 = ["Poland", "Ukraine", "USA"];
 //     }
 // });
 
-
+arr1[0]= "P";
+arr1[1]= "U";
+arr1[2]="U";
+console.log(arr1);    
 
 
 //3
