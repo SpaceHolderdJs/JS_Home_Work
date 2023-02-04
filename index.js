@@ -23,7 +23,11 @@ console.log(result2);
 
 const arr2 = [{ city: "Lviv" }, { city: "Kyiv" }, { city: "dnipro" }];
 
-
+// arr2.forEach((el) => {
+//     if (el.includes("L","K")) {
+//         console.log(el);
+//     }
+// });      не розумію чому не працює ((
 
 
 //3
