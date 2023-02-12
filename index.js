@@ -21,11 +21,12 @@
 
 //2 поверунути новий масив на базі існуючого виду
 
-const arr2 = [{name: "Igor", age: 20}, {name: "Oleg", age: 40}];
+const arr2 = [{ name: "Igor", age: 20 }, { name: "Oleg", age: 40 }];
 
-const arr21 = arr2.flat(2);
+const arr21 = arr2.flat(1);
+const [name1, name2] = arr21;
 
-console.log(arr21);
+console.log(name1, name2);
 
 
 
