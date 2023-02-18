@@ -1,31 +1,28 @@
-// 1 Написати функцію яка отримує від`ємне 
-// число аргументом та повертає додатнє число
-//  на базі від`ємного -1 → 1
+// 1. Написати функцію що приймає 2 масиви чисел та повертає
+//  той масив, сума чисел якого більша
 
-function key(x) {
-    x = +x; // преобразуем в число
-    if (x === 0 || isNaN(x)) {
-      return x;
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const res1 = arr1.reduce((acc, i) => acc + i)
+// console.log(res1);
+const res2 = arr2.reduce((acc, i) => acc + i)
+// console.log(res2);
+
+function  resul () {
+    if (res1 > res2) {
+        return (res1)
+    } else if (res1<res2){
+        return (res2)
     }
-    return x > 0 ? 1 : -1;
-  }
-console.log(key({}));
-
-function keys() {
-    return (0-1);
-}
-console.log(keys({  }));
+};
+console.log(resul());
 
 
-// 2. Написати функцію що отримує
-//  об`єкт та повертає всі його ключі у вигляді масиву
-//   {name: “Igor”, age: 23} → [”name”, “age”]
-
-function keys (obj) {
-return Object.keys(obj);
-}
-console.log(keys({name:"Alex", age:28}));
 
 
-// Співбесіда!!!!
-// Створіть свій метод map для масивів 
+
+// 2. Написати свою функцію-конструктор людини (person) з
+// аргументами name, age, city, skills (масив технологій з
+//     якими ви вмієте працювати, наприклад [”html”, “css”, “js]).
+//     Додати функцію до вашого об`єкту, що додає skill у масив ваших вмінь
