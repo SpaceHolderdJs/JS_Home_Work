@@ -1,21 +1,57 @@
-//1
+class Mercedes {
 
+    static isMercedes (car) {
+        return car instanceof Mercedes
+    }
 
-const fn = function (f1, f2) {
-	return {
-			result1: f1(),
-			result2: f2(),
-   }
+    static keys (car) {
+        const result = [];
+
+        for (let key in car) {
+            result[result.length] = key;
+        }
+
+        return result;
+    }
+
+    constructor (price, color, model, Maxspeed) {
+        this.price = price;
+        this.color = color;
+        this.model = model;
+        this.Maxspeed = Maxspeed;
+
+        return this;
+    }
+
+    info () {
+        console.table(this);
+    }
+
+    Logo () {
+        console.log(`The best or nothing ${this.price}`);
+    }
 }
 
-const res = fn(() => "res1", () => "res2")
+class Cclasee extends Mercedes {
+    constructor (price, color, model, Maxspeed, yearofproduction ) {
+        super(price, color, model, Maxspeed);
 
-console.log(res, "Result");
+        this.yearofproduction = yearofproduction;
 
-//2
+        return this;
+    }
 
-function SD (a,b) {
-    return a.toString().length + b.toString().length
+    LogoMercedes () {
+        console.log(`The best or nothing ${this.price}`);
+    }
 }
-const result22 = SD(10,1235456)
-console.log(result22)
+
+const SClasse = new Mercedes("150000 Euro", "black", "SClasse", 350);
+SClasse.info();
+SClasse.Logo();
+
+const cclasee = new Cclasee("120000 Euro", "blue", "Cclasee", 300, 2022);
+cclasee.info();
+cclasee.LogoMercedes();
+
+
