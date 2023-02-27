@@ -1,57 +1,32 @@
-class Mercedes {
+// const arr = new SuperArray([1,2,3])
+// arr.at(0)                    // повертає {element: 1, array: [1, 2, 3]}
 
-    static isMercedes (car) {
-        return car instanceof Mercedes
-    }
 
-    static keys (car) {
-        const result = [];
 
-        for (let key in car) {
-            result[result.length] = key;
-        }
-
-        return result;
-    }
-
-    constructor (price, color, model, Maxspeed) {
-        this.price = price;
-        this.color = color;
-        this.model = model;
-        this.Maxspeed = Maxspeed;
-
-        return this;
-    }
-
-    info () {
-        console.table(this);
-    }
-
-    Logo () {
-        console.log(`The best or nothing ${this.price}`);
+class Arr {
+    constractor(el) {
+        this.el = el;
     }
 }
 
-class Cclasee extends Mercedes {
-    constructor (price, color, model, Maxspeed, yearofproduction ) {
-        super(price, color, model, Maxspeed);
-
-        this.yearofproduction = yearofproduction;
-
-        return this;
+class SuperArray extends Arr {
+    constructor(el) {
+        super(el);
     }
-
-    LogoMercedes () {
-        console.log(`The best or nothing ${this.price}`);
+    showInfo() {
+        console.log(this);
+    }
+    copyInfo() {
+        return { ...this }
     }
 }
 
-const SClasse = new Mercedes("150000 Euro", "black", "SClasse", 350);
-SClasse.info();
-SClasse.Logo();
+SuperArray.prototype.copy = function () {
+    return null;
+}
 
-const cclasee = new Cclasee("120000 Euro", "blue", "Cclasee", 300, 2022);
-cclasee.info();
-cclasee.LogoMercedes();
+const arr = new Array([1, 2, 3]);
+console.log(arr);
+
 
 
