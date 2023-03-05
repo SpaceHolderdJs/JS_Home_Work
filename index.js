@@ -3,13 +3,8 @@
 
 
 
-class Arr {
-    constractor(el) {
-        this.el = el;
-    }
-}
 
-class SuperArray extends Arr {
+class SuperArray extends Array {
     constructor(el) {
         super(el);
     }
@@ -17,7 +12,7 @@ class SuperArray extends Arr {
         console.log(this);
     }
     copyInfo() {
-        return { ...this }
+        return { ...this[0] }
     }
 }
 
@@ -27,6 +22,6 @@ SuperArray.prototype.copy = function () {
 
 const arr = new Array([1, 2, 3]);
 console.log(arr);
-
+arr.showInfo();
 
 
