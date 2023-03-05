@@ -1,0 +1,12 @@
+body{
+    background: silver;
+}
+input,button {
+    font-size: 15px;
+    margin: 5px 5px;
+}
+.usersCard{
+font-size: 15px;
+background: green;
+margin: 5px 90px 30px 0px;
+}
