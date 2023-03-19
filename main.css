@@ -14,7 +14,6 @@ body {
 
 .sector1 {
     margin: -20px 100px;
-
 }
 
 input,
@@ -23,9 +22,16 @@ button {
     margin: 3px 5px;
 }
 
-.usersCard {
+.usersSection {
     font-size: 15px;
     background: lightgray;
     margin: 5px 10px;
     max-width: 1240px;
+}
+.user-card{
+    background: lightyellow;
+    margin-bottom: 45px;
+}
+.scroll-up{
+    margin-top: 25px;
 }
