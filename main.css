@@ -9,7 +9,8 @@ body {
     margin-right: 5%;
     text-align: center;
     height: 900px;
-    background: url(./foto/pxfuel.jpg) repeat-x;
+    background: url(./foto/pxfuel.jpg) no-repeat;
+    background-size: cover;
 }
 
 .sector1 {
