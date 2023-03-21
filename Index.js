@@ -19,7 +19,7 @@ const groupElementsOfArray = (arr, oneSetQuantity = 3) => {
     const result = [];
 
     for (let i = 0; i < arr.length; i++) {
-        result.puch(arr.slice(i * oneSetQuantity, (i + 1) * oneSetQuantity));
+        result.push(arr.slice(i * oneSetQuantity, (i + 1) * oneSetQuantity));
     }
     return result.filter((arr) => arr.length > 0);
 };
